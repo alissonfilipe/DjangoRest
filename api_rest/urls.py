@@ -9,6 +9,7 @@ urlpatterns = [
 
    #crinado rota para consultar por paramentro PK = ("Nick")
    path('user/<str:nick>',views.get_by_nick), #importando da view, senao criar
-   path('data/', views.user_manager)
+   # CRUD completo para usuários
+   path('users/', views.user_manager, name='user_manager'),
     
 ]

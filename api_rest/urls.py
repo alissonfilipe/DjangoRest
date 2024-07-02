@@ -5,11 +5,13 @@ from . import views
 
 urlpatterns = [
 
-   path('', views.get_users, name='get_all_users'), #trazendo a def todos os usuarios
+    # trazendo a def todos os usuarios
+    path('', views.get_users, name='get_all_users'),
 
-   #crinado rota para consultar por paramentro PK = ("Nick")
-   path('user/<str:nick>',views.get_by_nick), #importando da view, senao criar
-   # CRUD completo para usuários
-   path('users/', views.user_manager, name='user_manager'),
-    
+    # crinado rota para consultar por paramentro PK = ("Nick")
+    # importando da view, senao criar
+    path('user/<str:nick>', views.get_by_nick),
+    # CRUD completo para usuários
+    path('data/', views.user_manager),
+
 ]
